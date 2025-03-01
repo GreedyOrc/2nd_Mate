@@ -22,17 +22,17 @@
 
 .nav-link{
   font-weight: 300;
-  mat-icon {
+  .mat-icon {
     vertical-align: middle;
     margin-right: 1rem;
   }
 }
 
-.logo.app-container{
-  text-align: centre;
+.app-logo-container{
+  text-align: center;
   padding: 1rem 0;
-  .app-logo{
-    max-width: 30%;
+  .app-logo {
+    max-width: 40%;
   }
 }
 
