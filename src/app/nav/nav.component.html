@@ -3,10 +3,11 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
+
       <div class="logo-container">
-          <img src="../../assets/fishing-boat.png" alt="2nd_Mate Logo" class="app-logo">          
+          <img src="../assets/fishing-boat.png" alt="2nd_Mate_Logo" class="app-logo">          
       </div>
-    <mat-toolbar>Menu</mat-toolbar>
+
     <mat-nav-list>
       <a class="nav-link" mat-list-item href="#"><mat-icon>map</mat-icon> Map</a>
       <a class="nav-link"mat-list-item href="#"><mat-icon>table_view</mat-icon> Raw Data</a>
@@ -26,7 +27,7 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>2nd_Mate</span>
+      <span class="app-title">2nd_Mate</span>
     </mat-toolbar>
     <div class="app-container">
       Something in here - Testing! 
