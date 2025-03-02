@@ -8,6 +8,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import {NgOptimizedImage} from '@angular/common';
+import { RouterOutlet, RouterLink, provideRouter } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -20,6 +22,8 @@ import { map, shareReplay } from 'rxjs/operators';
     MatListModule,
     MatIconModule,
     AsyncPipe,
+    RouterOutlet,
+    RouterLink
   ]
 })
 export class NavComponent {

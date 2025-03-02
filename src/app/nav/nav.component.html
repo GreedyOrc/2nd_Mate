@@ -5,15 +5,16 @@
       [opened]="(isHandset$ | async) === false">
 
       <div class="app-logo-container">
-          <img src="fishing-boat1.png" alt="2nd_Mate_Logo" class="app-logo">
+          <img Src="fishing-boat1.png" alt="2nd_Mate_Logo" class="app-logo">
+          <!-- <a href="https://www.flaticon.com/free-icons/fishing" title="fishing icons">Fishing icons created by Freepik - Flaticon</a> -->
       </div>
 
     <mat-nav-list>
-      <a class="nav-link" mat-list-item href="#"><mat-icon>map</mat-icon> Map</a>
-      <a class="nav-link"mat-list-item href="#"><mat-icon>table_view</mat-icon> Raw Data</a>
-      <a class="nav-link"mat-list-item href="#"><mat-icon>login</mat-icon> Login/Register</a>
-      <a class="nav-link"mat-list-item href="#"><mat-icon>logout</mat-icon> Logout</a>
-      <a class="nav-link"mat-list-item href="#"><mat-icon>question_mark</mat-icon> About</a>
+      <a class="nav-link"mat-list-item routerLink="map"><mat-icon>map</mat-icon> Map</a>
+      <a class="nav-link"mat-list-item routerLink="table_view"><mat-icon>table_view</mat-icon> Raw Data</a>
+      <a class="nav-link"mat-list-item routerLink="login"><mat-icon>login</mat-icon> Login</a>
+      <a class="nav-link"mat-list-item routerLink="logout"><mat-icon>logout</mat-icon> Logout</a>
+      <a class="nav-link"mat-list-item routerLink="about"><mat-icon>question_mark</mat-icon> About</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -30,7 +31,7 @@
       <span class="app-title">2nd_Mate</span>
     </mat-toolbar>
     <div class="app-container">
-      Something in here - Testing! 
+      <router-outlet/>
     </div>
     
   </mat-sidenav-content>
