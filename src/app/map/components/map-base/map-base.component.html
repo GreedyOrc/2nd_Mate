@@ -1,1 +1,26 @@
-<p>map-base works!</p>
+Map below here! 
+    <!-- The map will render under this div. pass it under options -->
+    <div id='map'></div>
+    
+    <script src='https://fishing-app.gpsnauticalcharts.com/i-boating-fishing-marine-navigation-sdk/5.5/blc-maps.js?rand=1695425337'></script>
+    
+    <script>
+    
+    window.onload = function() {
+    var options =
+    {
+        container: 'map',
+        zoom: 12.5,
+        blc_access_token:'YOUR_ACCESS_TOKEN_HERE',
+        center: [-122.3889607,37.8115202]
+    }
+    var map = blcgl.external_to_js.blcCreateMapObject(options);
+    
+    map.on('load', function() {
+        console.log('map loaded.');
+    });
+    }
+    
+    
+    </script>
+
