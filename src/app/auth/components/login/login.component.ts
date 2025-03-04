@@ -29,7 +29,8 @@ export class LoginComponent {
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    // Min length not needed for login screen, insert following in the below statement if needed ", Validators.minLength(6)"
+    password: new FormControl('', [Validators.required])
   })
   errorMessageEmail = signal('');
   errorMessagePassword = signal('');
@@ -51,9 +52,9 @@ export class LoginComponent {
     }
     
     if (this.loginForm.get('password')?.errors?.['required']) {
-      this.errorMessagePassword.set('Not a valid email'); 
+      this.errorMessagePassword.set('You must enter a password'); 
     } else if (this.loginForm.get('password')?.errors?.['minlength']) {
-      this.errorMessagePassword.set('Minimum password length is 6 characters'); 
+      this.errorMessagePassword.set('Minimum password length is 6 characters'); //this line is not used - not required for log in but needed for registering an account. 
     } else {
       this.errorMessagePassword.set('');
     }
